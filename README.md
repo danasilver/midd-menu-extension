@@ -9,7 +9,7 @@ Get it in the [Chrome Web Store](https://chrome.google.com/webstore/detail/middl
  - One click buttons for the next and previous dates.
  - One click from the calendar popup to any date.
 
- More information and screenshots at [danasilver.org/projects/middlebury-menu-extension](http://danasilver.org/projects/middlebury-menu-extension/)
+More information and screenshots at [danasilver.org/projects/middlebury-menu-extension](http://danasilver.org/projects/middlebury-menu-extension/)
 
 ### Development
  - Clone the project from Github:
