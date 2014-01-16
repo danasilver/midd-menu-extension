@@ -15,6 +15,7 @@
 
     // The date currently displayed
     , webDate = $dateInput.val()
+    , webDateFormat = 'dddd, MMMM D, YYYY'
 
   ////////////////////////////////
   //// Style existing menu buttons
@@ -66,7 +67,7 @@
     .css('background-color', 'rgba(0, 0, 0, 0)')
     .css('cursor', 'pointer')
     .prepend('<span id="dateInputText">'
-            + moment(webDate, 'YYYY-MM-DD').format('ddd, MMMM D')
+            + moment(webDate, webDateFormat).format('ddd, MMMM D')
             + '</span>')
 
   // Hide the default apply button
@@ -83,8 +84,8 @@
 
       // Get a 'moment' (http://momentjs.com/)
       // for the previous and next days
-    , menuPrevMoment = moment(webDate, 'YYYY-MM-DD').subtract('days', 1)
-    , menuNextMoment = moment(webDate, 'YYYY-MM-DD').add('days', 1)
+    , menuPrevMoment = moment(webDate, webDateFormat).subtract('days', 1)
+    , menuNextMoment = moment(webDate, webDateFormat).add('days', 1)
 
     // Create a base element for the buttons
     , $baseElem = $('<a></a>')
@@ -98,12 +99,12 @@
     // Create the actual previous and next date buttons
     // Clone the base element so it isn't affected for the 2nd button
     , $menuPrevElem = $baseElem.clone()
-        .attr('href', baseURL + menuPrevMoment.format("YYYY-MM-DD"))
+        .attr('href', baseURL + menuPrevMoment.format(webDateFormat))
         .text(menuPrevMoment.format('MMMM D'))
         .css('left', '0')
 
     , $menuNextElem = $baseElem.clone()
-        .attr('href', baseURL + menuNextMoment.format("YYYY-MM-DD"))
+        .attr('href', baseURL + menuNextMoment.format(webDateFormat))
         .text(menuNextMoment.format('MMMM D'))
         .css('right', '0')
 
@@ -177,7 +178,7 @@
       // If the selected date is the same as the current page date,
       // don't reload the page.
       if (selectedDateMoment.format('YYYY-MM-DD') !== webDate) {
-        window.location.href = baseURL + selectedDateMoment.format('YYYY-MM-DD')  
+        window.location.href = baseURL + selectedDateMoment.format(webDateFormat)  
       }
 
     })

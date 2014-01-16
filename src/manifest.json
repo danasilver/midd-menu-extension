@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Middlebury Menu",
-  "version": "0.1.0",
+  "version": "0.1.1",
 
   "description": "Makes the Middlebury Menu easier to use.",
   "author": "Dana Silver",
