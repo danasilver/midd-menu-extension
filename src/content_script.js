@@ -1,13 +1,14 @@
 /**
  * Middlebury Menu
- * v0.1.0
+ * v0.1.2
  *
  * Copyright 2014 Dana Silver <dsilver@middlebury.edu>
  * Released under the MIT License.
  */
 
 (function($, moment, document) {
-  var $menuContext = $('.views-exposed-form')
+  var $pricesContext = $('#visitor_prices')
+    , $menuContext = $('.views-exposed-form')
     , $dateInputWrapper = $('#edit-field-day-value-wrapper', $menuContext)
     , $dateInput = $dateInputWrapper.find('input')
     , $applyBtnWrapper = $('.views-submit-button', $menuContext)
@@ -72,6 +73,10 @@
 
   // Hide the default apply button
   $applyBtnWrapper
+    .css('display', 'none')
+
+  // Hide the visitor prices
+  $pricesContext
     .css('display', 'none')
 
   //////////////////////////////////////////
