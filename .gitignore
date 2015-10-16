@@ -2,4 +2,6 @@
 .DS_Store
 
 # Zipped extension
-midd-menu.zip
+*.zip
+*.pem
+*.crx
