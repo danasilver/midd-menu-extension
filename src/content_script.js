@@ -7,7 +7,7 @@
  */
 
 (function($, moment, document) {
-  var $pricesContext = $('#visitor_prices')
+  var $pricesContext = $('.view-header')
     , $menuContext = $('.views-exposed-form')
     , $dateInputWrapper = $('#edit-field-day-value-wrapper', $menuContext)
     , $dateInput = $dateInputWrapper.find('input')
@@ -83,7 +83,7 @@
   //// Create previous and next date buttons
   //////////////////////////////////////////
 
-  var 
+  var
       // The base URL for a custom day's menu
       baseURL = 'http://menus.middlebury.edu/dining?field_day_value%5Bvalue%5D%5Bdate%5D='
 
@@ -174,7 +174,7 @@
         , selectedDateMoment = moment(year + '-' + month + '-' + day, 'YYYY-M-D')
 
       // The page replaces the date input value to a YYYY-MM-DD
-      // value. If $dateInput value is set too soon, the page 
+      // value. If $dateInput value is set too soon, the page
       // will overwrite the extension's change.
       setTimeout(function() {
         $('#dateInputText', $calendar).val(selectedDateMoment.format('ddd, MMMM D'))
@@ -183,11 +183,11 @@
       // If the selected date is the same as the current page date,
       // don't reload the page.
       if (selectedDateMoment.format('YYYY-MM-DD') !== webDate) {
-        window.location.href = baseURL + selectedDateMoment.format(webDateFormat)  
+        window.location.href = baseURL + selectedDateMoment.format(webDateFormat)
       }
 
     })
   }
 
-  
+
 })(jQuery, moment, document)
