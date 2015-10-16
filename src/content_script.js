@@ -85,7 +85,7 @@
 
   var
       // The base URL for a custom day's menu
-      baseURL = 'http://menus.middlebury.edu/dining?field_day_value%5Bvalue%5D%5Bdate%5D='
+      baseURL = 'http://menus.middlebury.edu?field_day_value[value][date]='
 
       // Get a 'moment' (http://momentjs.com/)
       // for the previous and next days
